@@ -35,9 +35,9 @@ SetUpIdentityPaging:
 
     ;Set long-mode bit in EFER module-specific reg
     mov ecx, 0xC0000080
-    rdnsr
+    rdmsr
     or eax, 1<<8
-    wrnsr
+    wrmsr
 
     ;Enable paging
     mov eax, cr0
