@@ -1,5 +1,3 @@
-[org 0x7e00]
-
 jmp EnterProtectedMode
 
 %include "gdt.asm"
@@ -46,11 +44,13 @@ StartProtectedMode:
 
 ;Starting a 64-bit function so the CPU will actually be in 64-bit mode
 [bits 64]
+[extern _start]
 Start64bit:
 	mov edi, 0xB8000			;Moving VIDMEM addr to destination reg
 	mov rax, 0x1f201f201f201f20	;New register due to change to 64-bit mode
 	mov ecx, 500
 	rep stosq
+	call _start
 	jmp $
 
 times 2048-($-$$) db 0

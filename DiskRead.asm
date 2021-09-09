@@ -1,9 +1,9 @@
-PROGRAM_SPACE equ 0x7e00
+PROGRAM_SPACE equ 0x8000
 
 ReadDisk:
 	mov ah, 0x02
 	mov bx, PROGRAM_SPACE	;Defines the program space for the BIOS
-	mov al, 4				;Reads 4 sectors (512B)
+	mov al, 32				;Reads 4 sectors (512B)
 	mov dl, [BOOT_DISK]		;Set drive
 	mov ch, 0x00			;Cylinder 0
 	mov dh, 0x00			;Head 0
