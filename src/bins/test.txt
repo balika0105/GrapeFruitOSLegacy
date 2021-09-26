@@ -1,0 +1,2 @@
+The text that you can see
+is loaded from an external file
