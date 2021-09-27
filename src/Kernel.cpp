@@ -5,8 +5,7 @@
 
 
 extern const char Splash[];
-
-
+extern const void* Shell;
 
 //extern "C" is needed for linker script. It doesn't like C++
 extern "C" void _start(){
@@ -31,7 +30,7 @@ extern "C" void _start(){
     PrintLn("\n\rDone!");
     //Loading stuff DONE
 
-    PrintLn(IntToString(-53411));
+    Shell;
 
     return;
 }

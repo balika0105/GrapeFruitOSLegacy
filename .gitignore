@@ -2,3 +2,4 @@ bin/bootloader.flp
 bin/GrapeFruitOS.flp
 Docs/*
 bochsrc.bxrc
+.vs/*

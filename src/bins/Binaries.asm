@@ -15,3 +15,4 @@
 
 ;IncBin Test, "test.txt"
 IncBin Splash, "splash.txt"
+IncBin Shell, "prgs/gfsh.o"
