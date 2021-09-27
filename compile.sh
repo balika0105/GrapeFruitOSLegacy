@@ -12,4 +12,4 @@ cd ..
 cd ../bin
 ld -T"link.ld"
 
-cat bootloader.bin kernel.bin > bootloader.flp
+cat bootloader.bin kernel.bin > GrapeFruitOS.flp
