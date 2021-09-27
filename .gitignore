@@ -1,2 +1,4 @@
 bin/bootloader.flp
-bin/GrapeFruitTest.flp
+bin/GrapeFruitOS.flp
+Docs/*
+bochsrc.bxrc

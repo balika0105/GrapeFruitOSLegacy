@@ -59,6 +59,13 @@ extern "C" void isr1_handler(){
 
 
     if(scanCode < 0x3A){
+        //This part is a mess, the Lookup tables are hardcoded.
+        //This is not optimal
+        //Too bad
+
+        //(will be fixed in a later update)
+
+
         //chr = ENUS_Querty::ScanCodeLookupTable[scanCode];
         chr = HU_Qwertz::ScanCodeLookupTable[scanCode];
     }

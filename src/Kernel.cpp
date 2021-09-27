@@ -3,6 +3,7 @@
 #include "include/KBHandler.hpp"
 #include "include/version.hpp"
 
+
 extern const char Splash[];
 
 
@@ -20,12 +21,17 @@ extern "C" void _start(){
 
     //Actually loading stuff
     Print("Loading...");
+
     InitializeIDT();
-    PrintLn("\n\rDone!");
 
-
-    PrintLn("\n\rKeyboard input scancode test");
+    PrintLn("Keyboard INIT");
 
     MainKBHandler = KeyBoardHandler;
+
+    PrintLn("\n\rDone!");
+    //Loading stuff DONE
+
+    PrintLn(IntToString(-53411));
+
     return;
 }

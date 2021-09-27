@@ -110,6 +110,41 @@ const char* HexToString(T value){
     return hexToStringOutput;
 }
 
+char intToString[128];
+template<typename T>
+const char* IntToString(T value){
+    //This function helps us putting decimal values to the screen
+    uint_8 size = 0;
+    uint_8 isNegative = 0;
+
+    if(value < 0){
+        isNegative = 1;
+        value *= -1;
+        intToString[0] = '-';
+    }
+
+    uint_64 sizeTester = (uint_64)value;
+    while(sizeTester / 10 > 0){
+        sizeTester /= 10;
+        size++;
+    }
+
+    uint_8 index = 0;
+    //Casting our value into an unsigned 64-bit int
+    uint_64 newValue = (uint_64)value;
+    while(newValue / 10 > 0){
+        uint_8 remainder = newValue % 10;
+        newValue /= 10;
+        intToString[isNegative + size - index] = remainder + 48; // +48 is needed to get the right ascii value
+        index++;
+    }
+
+    uint_8 remainder = newValue % 10;
+    intToString[isNegative + size - index] = remainder + 48;
+    intToString[isNegative + size + 1] = 0; //Null-terminating string
+    return intToString;
+}
+
 void ClearScreen(uint_64 ClearColor = BACKGROUND_BLACK | FOREGROUND_WHITE){
     uint_64 value = 0;
     value += ClearColor << 8;
