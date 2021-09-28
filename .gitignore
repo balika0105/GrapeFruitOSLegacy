@@ -1,5 +1,5 @@
-bin/bootloader.flp
-bin/GrapeFruitOS.flp
+bin/*
+!bin/link.ld
 Docs/*
 bochsrc.bxrc
 .vs/*
