@@ -49,6 +49,8 @@ function do_install(){
 
 }
 
+
+# This part of the script checks if 'dialog' is installed, if not, auto-install
 REQUIRED_PKG="dialog"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
 echo Checking for $REQUIRED_PKG: $PKG_OK

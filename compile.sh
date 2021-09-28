@@ -5,7 +5,7 @@ nasm bootloader.asm -f bin -o ../bin/bootloader.bin
 nasm ExtendedProgram.asm -f elf64 -o ../bin/ExtendedProgram.o
 
 cd bins
-./compile_prgs.sh #Compile programs into image
+# ./compile_prgs.sh #Compile programs into image
 nasm Binaries.asm -f elf64 -o ../../bin/Binaries.o
 cd ..
 
