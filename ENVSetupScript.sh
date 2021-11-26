@@ -32,7 +32,7 @@ function do_install(){
 	../gcc-11.2.0/configure --target=$TARGET --prefix=$PREFIX --disable-nls --disable-libssp --enable-language=c++ --without-headers
 
 	# Make gcc warning
-	dialog --title "Making gcc" --msgbox "The script will now proceed to make gcc. This will take a long time. Make a coffee, or if your machine is ancient, go for a run" 20 50
+	dialog --title "Making gcc" --msgbox "The script will now proceed to make gcc. This will take a long time. Make a coffee, or if your machine is ancient, go for a run" 7 50
 
 	sudo make all-gcc
 
@@ -43,7 +43,7 @@ function do_install(){
 
 	# Finishing up
 	clear
-	dialog --title "Setup complete" --msgbox "Installation complete! You can now use the environment!" 10 40
+	dialog --title "Setup complete" --msgbox "Installation complete! You can now use the environment!" 5 59
 
 	echo "Script by github.com/balika0105"
 
@@ -64,7 +64,7 @@ dialog --title "Setup script for AbsurdPoncho's development environment" \
 
 # Making a super fancy menu screen
 
-dialog --title "Start installation procedure" --yesno "Are you sure that you want to start the installation?" 7 45
+dialog --title "Start installation procedure" --yesno "Are you sure that you want to start the installation?" 5 57
 
 response=$?
 case $response in
