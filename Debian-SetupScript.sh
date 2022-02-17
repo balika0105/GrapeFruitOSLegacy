@@ -19,8 +19,8 @@ function do_install(){
 	export PATH="$PREFIX/bin:$PATH"
 	mkdir /tmp/src
 	cd /tmp/src
-	curl -O https://ftp.gnu.org/gnu/binutils/binutils-2.37.tar.gz
-	tar xf binutils-2.37.tar.gz
+	curl -O https://ftp.gnu.org/gnu/binutils/binutils-2.38.tar.gz
+	tar xf binutils-2.38.tar.gz
 	mkdir binutils-build
 	cd binutils-build
 	../binutils-2.37/configure --target=$TARGET --enable-interwork --enable-multilib --disable-nls --disable-werror --prefix=$PREFIX 2>&1 | tee configure.log

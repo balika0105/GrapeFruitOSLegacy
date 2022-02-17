@@ -18,8 +18,8 @@ function do_install(){
 	export PATH="$PREFIX/bin:$PATH"
 	mkdir /tmp/src
 	cd /tmp/src
-	curl -O https://ftp.gnu.org/gnu/binutils/binutils-2.37.tar.gz
-	tar xf binutils-2.37.tar.gz
+	curl -O https://ftp.gnu.org/gnu/binutils/binutils-2.38.tar.gz
+	tar xf binutils-2.38.tar.gz
 	mkdir binutils-build
 	cd binutils-build
 	../binutils-2.37/configure --target=$TARGET --enable-interwork --enable-multilib --disable-nls --disable-werror --prefix=$PREFIX 2>&1 | tee configure.log
@@ -51,7 +51,7 @@ function do_install(){
 
 
 # This part of the script checks if 'dialog' is installed, if not, auto-install
-REQUIRED_PKG="dialog"
+REQUIRED_PKG="dialog curl"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
 echo "Checking for $REQUIRED_PKG: $PKG_OK"
 if [ "" = "$PKG_OK" ]; then
