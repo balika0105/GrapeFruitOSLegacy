@@ -42,6 +42,8 @@ function do_install(){
 	sudo make install-target-libgcc
 
 	# Finishing up
+	echo "Cleaning temporary folder..."
+	sudo rm -rf /tmp/src
 	clear
 	dialog --title "Setup complete" --msgbox "Installation complete! You can now use the environment!" 5 59
 	clear
