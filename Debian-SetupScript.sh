@@ -11,6 +11,7 @@
 
 #Pre-defining install thing
 function do_install(){
+	clear
 	sudo apt update && sudo apt upgrade -y
 	sudo apt install build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo nasm -y
 	export PREFIX="/usr/local/x86_64elfgcc"
@@ -44,15 +45,15 @@ function do_install(){
 	# Finishing up
 	clear
 	dialog --title "Setup complete" --msgbox "Installation complete! You can now use the environment!" 5 59
-
+	#echo "Script end"
 	echo "Script by github.com/balika0105"
 
 }
 
 
 # This part of the script checks if 'dialog' is installed, if not, auto-install
-REQUIRED_PKG="dialog"
-PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
+REQUIRED_PKG="dialog curl"
+PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG | grep "install ok installed")
 echo "Checking for $REQUIRED_PKG: $PKG_OK"
 if [ "" = "$PKG_OK" ]; then
   echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
