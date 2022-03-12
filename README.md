@@ -1,4 +1,5 @@
 # GrapeFruit OS Legacy
+### mb-testing branch | Maintained by Balázs M., used for development
 
 Project started by Balázs György Markgruber as a hobby OS, based on [AbsurdPoncho](https://github.com/AbsurdPoncho)'s [tutorial series](https://www.youtube.com/playlist?list=PLxN4E629pPnKKqYsNVXpmCza8l0Jb6l8-)
 
