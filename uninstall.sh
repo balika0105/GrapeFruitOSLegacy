@@ -3,6 +3,7 @@
 function do_uninstall(){
     echo "Deleting GCC directory"
     sudo rm -rf /usr/local/x86_64elfgcc
+    sudo rm -rf /tmp/src
 }
 
 dialog --title "Uninstall script for AbsurdPoncho's development environment" \

@@ -22,7 +22,7 @@ function do_install(){
 	tar xf binutils-2.38.tar.gz
 	mkdir binutils-build
 	cd binutils-build
-	../binutils-2.37/configure --target=$TARGET --enable-interwork --enable-multilib --disable-nls --disable-werror --prefix=$PREFIX 2>&1 | tee configure.log
+	../binutils-2.38/configure --target=$TARGET --enable-interwork --enable-multilib --disable-nls --disable-werror --prefix=$PREFIX 2>&1 | tee configure.log
 	sudo make all install 2>&1 | tee make.log
 	cd /tmp/src
 	curl -O https://ftp.gnu.org/gnu/gcc/gcc-11.2.0/gcc-11.2.0.tar.gz
