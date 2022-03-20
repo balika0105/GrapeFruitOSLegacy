@@ -65,9 +65,11 @@ extern "C" void isr1_handler(){
 
         //(will be fixed in a later update)
 
-
-        //chr = ENUS_Querty::ScanCodeLookupTable[scanCode];
-        chr = HU_Qwertz::ScanCodeLookupTable[scanCode];
+        chr = ENUS_Qwerty::ScanCodeLookupTable[scanCode];
+        
+        //For hungarian layout
+        //Uncomment and recompile for hungarian layout
+        //chr = HU_Qwertz::ScanCodeLookupTable[scanCode];
     }
     if(MainKBHandler != 0){
         MainKBHandler(scanCode, chr);
